@@ -7,66 +7,69 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/icon.ico">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="styles/site.css">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" width="120" height="60" alt="">
-            </a>
-            <button class="navbar-toggler toggler-home" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span>
+    <header>
+        <nav class="w-full transition-all apply_bg backdrop-blur duration-500  z-[999] py-3 fixed top-0">
+            <div class="wrapper mx-auto flex items-center justify-between">
+                <a class="navbar-brand" href="index.html">
+                    <img class="md:w-[120px] w-[100px] h-[40px] md:h-[50px]" src="img/logo.svg"  alt="Cypht Logo">
+                </a>
+                <button class="w-9 h-9 border md:hidden  shown rounded grid place-items-center hover:bg-black" type="button" id="navbarToggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 fill-slate-50 stroke-slate-50">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                          
+                </button>
+                <div class="md:flex hidden" id="navbarSupportedContent">
+                    <ul class="flex gap-3 md:border-r border-gray-500 pr-3  uppercase font-semibold text-white">
+                        <li class="nav_item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="security.html">Security</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="modules.html">Mods</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="license.html">License</a>
+                        </li>
+                        <li class="nav_item_active">
+                            <a class="nav-link" href="documentation.html">Documentation</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="https://unencumberedbyfacts.com" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav_item">
+                            <a onclick="document.getElementsByClassName('navbar-collapse')[0].style.display='none';"
+                               class="nav-link" href="contribute.html">Contribute</a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-1 items-center ml-3">
+                        <a class="ml-3 cursor-pointer" target="_blank" href="https://github.com/cypht-org/cypht">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 hover:fill-gray-200 fill-gray-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path></svg>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="features.html">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="security.html">Security</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="modules.html">Mods</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="license.html">License</a>
-                    </li>
-                    <li class="nav-item">
-                        <!--<a class="nav-link" href="tests.html">Test</a>-->
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="documentation.html">Documentation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://unencumberedbyfacts.com" target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a onclick="document.getElementsByClassName('navbar-collapse')[0].style.display='none';"
-                           class="nav-link" href="contribute.html">Contribute</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 <div style="margin-top: 100px;"></div>
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
-        <div class="element1">
-            <img src="img/login.PNG" alt="login">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid md:grid-cols-2 grid-cols-1  p-4 bg-gray-100 border rounded-lg gap-5 ">
+        <div class="col-span-1 order-last md:order-first">
+            <img class="rounded-lg" src="img/login.PNG" alt="Cypht 1.x login page">
         </div>
-        <div class="element2">
-            <h1>Welcome to Cypht</h1>
-            <p>Once installation is in
+        <div class="col-span-1">
+            <h1 class="md:text-4xl text-2xl font-bold color_">Welcome to Cypht</h1>
+            <p class=" mt-5">Once installation is in
                 place, the users can login
                 the webmail using their
                 usernames & passwords.</p>
@@ -74,136 +77,163 @@
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
-
-        <div class="element2">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
+        <div class=" col-span-1 ">
             <p>After successfully logging in the webmail, the users will be redirected to the following home page of the webmail where the interactive interface allows user to perform multiple actions,</p>
         </div>
-        <div class="element1">
-            <img src="img/home.PNG" alt="login">
+        <div class="col-span-1">
+            <img class="rounded-lg" src="img/home.PNG" alt="Cypht 1.x home page">
         </div>
     </div>
 </section>
 
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
-        <div class="element1">
-            <img src="img/Add.PNG" alt="add">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5 ">
+        <div class="col-span-1 order-last md:order-first">
+            <img class="rounded-lg" src="img/Add.PNG" alt="Add an E-mail Account of any service provider to be able to access multiple inboxes from Cypht.">
         </div>
-        <div class="element2">
-            <p>The users can Add an E-mail Account of any service provider to be able to access multiple inboxes from Cypht.</p>
+        <div class="col-span-1">
+            <p class="">The users can Add an E-mail Account of any service provider to be able to access multiple inboxes from Cypht.</p>
         </div>
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
 
-        <div class="element2">
-            <p class="text-center">Enhanced customization capabilities allow user to setup, configure, and manage IMAP, SMTP and JMAP servers and setup the ATOM/RSS Feed</p>
+        <div class="col-span-1">
+            <p class="text-center ">Enhanced customization capabilities allow user to setup, configure, and manage IMAP, SMTP and JMAP servers and setup the ATOM/RSS Feed</p>
         </div>
-        <div class="element1">
+        <div class="col-span-1">
             <img src="img/Multi.PNG" alt="login">
         </div>
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
-
-        <div class="element2">
-            <h1>Combined Inbox</h1>
-            <p>The advanced and most efficient service of the Cypht enables users to access multiple email accounts at the same time.
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
+        <div class="col-span-1">
+            <h1 class="md:text-4xl text-2xl font-bold color_">Combined Inbox</h1>
+            <p class=" mt-5">The advanced and most efficient service of the Cypht enables users to access multiple email accounts at the same time.
                 The users can view inboxes of different email providers and can send, receive, and manage email messages from the interactive webmail.
                 Also, the webmail allows provides the functionality to search, sort, and filter emails.</p>
         </div>
-        <div class="element1">
-            <img src="img/Inbox.PNG" alt="login">
+        <div class="col-span-1 md:text-xl">
+            <img class="rounded-lg" src="img/Inbox.PNG" alt="Cypht 1.x Combined Inbox">
         </div>
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
-
-        <div class="element1">
-            <img src="img/Contact.PNG" alt="Contact">
+<section class="wrapper mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
+        <div class="col-span-1 order-last md:order-first">
+            <img class="rounded-lg overflow-hidden" src="img/Contact.PNG" alt="Contact">
         </div>
-        <div class="element2">
-            <h1>Contact Book</h1>
-            <p>One-click Contact Book  allows users to efficiently add people to your contacts.
+        <div class="col-span-1 md:text-xl">
+            <h1 class="md:text-4xl text-2xl font-bold color_">Contact Book</h1>
+            <p class=" mt-5">One-click Contact Book  allows users to efficiently add people to your contacts.
                 Contacts can be added via clicking the Contacts button from the main menu,</p>
         </div>
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
-        <div class="element2">
-            <p class="text-center">Or simply by clicking on the “two-person” icon in the message you receive.</p>
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
+        <div class="col-span-1">
+            <p class="text-center ">Or simply by clicking on the “two-person” icon in the message you receive.</p>
         </div>
-        <div class="element1">
+        <div class="col-span-1">
             <img src="img/Twoperson.PNG" alt="Twoperson">
         </div>
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
 
-        <div class="element2">
-            <h1>Calendar</h1>
-            <p>The calendar feature allows user to create different events by clicking the “+” icon on top-right corner.
+        <div class="col-span-1">
+            <h1 class="md:text-4xl text-2xl font-bold color_">Calendar</h1>
+            <p class=" mt-5">The calendar feature allows user to create different events by clicking the “+” icon on top-right corner.
                 The created reminders and events will be shown in the calendar making it easier for user to keep track of the special events.</p>
         </div>
-        <div class="element1">
+        <div class="col-span-1">
             <img src="img/Calendar.PNG" alt="Calendar">
         </div>
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex; align-items: center; justify-content: center;">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
 
-        <div class="element1">
+        <div class="col-span-1 order-last md:order-first">
             <img src="img/Compose.PNG" alt="Compose">
         </div>
-        <div class="element2">
-            <h1>Compose Email</h1>
-            <p>The webmail offers simple and interactive interface to compose and send an email message from any of the added email accounts along with the functionalities to access draft emails by clicking the “document” icon on top-right corner, add signatures, attachments, etc.</p>
+        <div class="col-span-1">
+            <h1 class="md:text-4xl text-2xl font-bold color_">Compose Email</h1>
+            <p class=" mt-5">The webmail offers simple and interactive interface to compose and send an email message from any of the added email accounts along with the functionalities to access draft emails by clicking the “document” icon on top-right corner, add signatures, attachments, etc.</p>
+        </div>
+    </div>
+</section>
+
+<section class="wrapper mb-8 md:text-xl">
+    <div class="flex p-4 bg-gray-100 border rounded-lg gap-5 flex-col">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="col-span-1">
+                <h1 class="md:text-4xl text-2xl font-bold color_">Archive Email</h1>
+                <p class=" mt-5">Cypht offers two way to archive message, you can archive message from your message or from reading your message. Here are the steps of how to do it : <br>
+                     <ol class="pl-3 list-inside list-decimal ">
+                        <li>Click the on square and after clicking, the square will have a gray background which means the message is selected and the menu will appear on the top of the page</li>
+                        <li>After the menu appear click the archive button as shown on the screen shot then, the message will move to the archive folder.</li>
+                     </ol>
+                </p>
+            </div>
+            <div class="col-span-1">
+                <img class="rounded-lg" src="img/archive_inline.png" alt="Cypht Archive Message Inline">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="col-span-1">
+                    <ol start="3" class="pl-3 list-inside list-decimal  li">
+                        <li>Here as you can see on the screenshot, you read the message and after reading it, find the achive message link, click it and the message will be archived.</li>
+                     </ol>
+                </p>
+            </div>
+            <div class="col-span-1">
+                <img class="rounded-lg" src="img/archive_message.png" alt="Cypht Archive Message Inline">
+            </div>
         </div>
     </div>
 </section>
 
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
 
-        <div class="element2">
-            <h1>User Profiles</h1>
-            <p>From webmail settings options, the user can access the feature to add numerous profiles in the webmail allowing users to combine IMAP accounts with SMTP accounts and setup signatures and reply-to details.</p>
+        <div class="col-span-1">
+            <h1 class="md:text-4xl text-2xl font-bold color_">User Profiles</h1>
+            <p class=" mt-5">From webmail settings options, the user can access the feature to add numerous profiles in the webmail allowing users to combine IMAP accounts with SMTP accounts and setup signatures and reply-to details.</p>
         </div>
-        <div class="element1">
-            <img src="img/userprofil.PNG" alt="profile">
+        <div class="col-span-1">
+            <img class="rounded-lg" src="img/userprofil.PNG" alt="profile">
         </div>
     </div>
 </section>
 
-<section class="content-section-doc container">
-    <div style="display: flex;align-items: center; justify-content: center;">
-        <div class="element1">
-            <img src="img/Developer.PNG" alt="developer">
+<section class="wrapper mb-8 md:text-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-4 bg-gray-100 border rounded-lg gap-5">
+        <div class="col-span-1 order-last md:order-first">
+            <img class="rounded-lg" src="img/Developer.PNG" alt="developer">
         </div>
-        <div class="element2">
-            <h1>Developer Options</h1>
-            <p> Another interesting feature of the open-source platform is its provision of the developer documentation and links to the source code. Thereby enabling the developer community of the webmail to actively contribute to making the platform more efficient, advanced, and reliable.</p>
+        <div class="col-span-1">
+            <h1 class="md:text-4xl text-2xl font-bold color_">Developer Options</h1>
+            <p class=" mt-5"> Another interesting feature of the open-source platform is its provision of the developer documentation and links to the source code. Thereby enabling the developer community of the webmail to actively contribute to making the platform more efficient, advanced, and reliable.</p>
         </div>
     </div>
 </section>
 
-<script src="jquery.slim.min.js"></script>
-<script src="bootstrap.bundle.min.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

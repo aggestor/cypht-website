@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -7,117 +7,113 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cypht</title>
     <link rel="icon" type="image/png" href="img/icon.ico">
-    <link rel="stylesheet" href="site.css">
+    <!-- <link rel="stylesheet" href="site.css"> -->
+    <link rel="stylesheet" href="styles/site.css"
 </head>
 
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
-        <div class="container">
+    <nav class="w-full transition-all apply_bg backdrop-blur duration-500  z-[999] py-3 fixed top-0">
+        <div class="wrapper mx-auto flex items-center justify-between">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" width="120" height="60" alt="">
+                <img class="md:w-[120px] w-[100px] h-[40px] md:h-[50px]" src="img/logo.svg"  alt="Cypht Logo">
             </a>
-            <button class="navbar-toggler toggler-home" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="w-9 h-9 border md:hidden  shown rounded grid place-items-center hover:bg-black" type="button" id="navbarToggler">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 fill-slate-50 stroke-slate-50">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                      
             </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item active">
+            <div class="md:flex hidden" id="navbarSupportedContent">
+                <ul class="flex gap-3 md:border-r border-gray-500 pr-3  uppercase font-semibold text-white">
+                    <li class="nav_item_active">
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav_item">
                         <a class="nav-link" href="features.html">Features</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav_item">
                         <a class="nav-link" href="security.html">Security</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav_item">
                         <a class="nav-link" href="modules.html">Mods</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav_item">
                         <a class="nav-link" href="license.html">License</a>
                     </li>
-                    <li class="nav-item">
-                        <!--<a class="nav-link" href="tests.html">Test</a>-->
-                    </li>
-                    <li class="nav-item">
+                    <li class="nav_item">
                         <a class="nav-link" href="documentation.html">Documentation</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav_item">
                         <a class="nav-link" href="https://unencumberedbyfacts.com" target="_blank">Blog</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav_item">
                         <a onclick="document.getElementsByClassName('navbar-collapse')[0].style.display='none';"
                            class="nav-link" href="contribute.html">Contribute</a>
                     </li>
                 </ul>
+                <div class="flex gap-1 items-center ml-3">
+                    <a class="ml-3 cursor-pointer" target="_blank" href="https://github.com/cypht-org/cypht">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 hover:fill-gray-200 fill-gray-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 </header><!-- Banner Section-->
 <section class="banner">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-sm-7">
-                <div class="hero">
-                    <h2>All your E-mail, from all your accounts, in one place</h2>
-                    <p>Cypht is not your father's webmail. Unless you are one of my daughters, in which case it is your
-                        father's webmail. Cypht (pronounced "sift") is like a news reader, but for E-mail. Cypht does
-                        not replace your existing accounts - it combines them into one. And it's also a news reader.</p>
-                        <div class="button_cont">
-                            <div class="dropdown float-right">
-                                <button class="install-btn example_d" for="btnControl">Install</button>
-                                <div class="dropdown-content">
-                                  <a href="install-1x.html">Version 1</a>
-                                  <a href="install-2x.html">Version 2</a>
+    <div class="wrapper flex items-center h-full ">
+        <div class="md:w-7/12 w-full">
+            <div class="p-3 md:p-0">
+                <h1 class="md:text-5xl text-3xl text-white w-[95%] font-bold uppercase"><span class="color_">All your E-mail</span>, from all your accounts, <span class="text-[#bbc2ce]">in one place</span></h2>
+                <p class="mt-7 text-[#bbc2ce] md:text-xl md:w-[80%]">Cypht is not your father's webmail. Unless you are one of my daughters, in which case it is your
+                    father's webmail. Cypht (pronounced "sift") is like a news reader, but for E-mail. Cypht does
+                    not replace your existing accounts - it combines them into one. And it's also a news reader.</p>
+                    <div class="mt-5  flex gap-2 md:w-[45%] w-[55%] ">
+                            <button class="home_install_btn relative">
+                                <div class="flex items-center p-1 gap-2">
+                                    Install
+                                    <svg id="install_btn_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                        </svg>
                                 </div>
-                              </div>
-                        </div>
+                                    <div class="version_picker text-base hidden w-full">
+                                    <a href="install-1x.html">Version 1 &rarr;</a>
+                                    <a href="install-2x.html">Version 2 &rarr;</a>
+                                    </div>
+                            </button>
                     </div>
-                </div>
             </div>
         </div>
     </div>
 </section><!-- Intro section-->
-<section id="as-services">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="as-services-head">
-                    <h2> A standard E-mail client</h2>
-                    <p> The driving force behind Cypht development is to provide combined views for multiple
-                        accounts, but it's also a standard E-mail client that lets you browse and manage IMAP
-                        folders and send outbound messages with SMTP </p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="as-services-head">
-                    <h2>A set of plugins</h2>
-                    <p> Cypht is an application built entirely of plugins, or as we call them, module sets (which is
-                        obviously way cooler sounding than plugins), that are executed by the framework. Modules
-                        provide a flexible way to add new features or customize the program without hacking the code
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="as-services-head">
-                    <h2>An open source solution</h2>
-                    <p> Cypht is Open Source (LGPL V2), and written in PHP and JavaScript. If you are looking for a
-                        lightweight webmail solution for an ISP, school, business, or just personal use, I hope that
-                        Cypht can help!</p>
-                </div>
-            </div>
-        </div>
+<section id="services" class="grid md:grid-cols-3 grid-cols-1 md:h-[400px] wrapper place-items-center gap-3 mt-5 md:mt-0 md:gap-10">
+    <div class="service_card">
+            <h2> A standard E-mail client</h2>
+            <p> The driving force behind Cypht development is to provide combined views for multiple
+                accounts, but it's also a standard E-mail client that lets you browse and manage IMAP
+                folders and send outbound messages with SMTP </p>
+    </div>
+    <div class="service_card">
+        <h2>A set of plugins</h2>
+        <p> Cypht is an application built entirely of plugins, or as we call them, module sets (which is
+            obviously way cooler sounding than plugins), that are executed by the framework. Modules
+            provide a flexible way to add new features or customize the program without hacking the code
+        </p>
+    </div>
+    <div class="service_card">
+            <h2>An open source solution</h2>
+            <p> Cypht is Open Source (LGPL V2), and written in PHP and JavaScript. If you are looking for a
+                lightweight webmail solution for an ISP, school, business, or just personal use, I hope that
+                Cypht can help!</p>
     </div>
 </section><!-- features section-->
-<section class="feature-section">
-    <div class="container">
-        <h2>Features</h2>
-        <div class="row  ">
-            <div class="col-md-4">
+<section class="feature_section_bg">
+    <div class="feature_section wrapper">
+        <h2 class="mb-6">Features</h2>
+        <div class='grid md:grid-cols-3 grid-cols-1 gap-5'>
+            <div class="features_list">
                 <ul>
                     <li>Combined inbox, unread, sent, and flagged message views for all your E-mail accounts (and
                         RSS feeds), as well as standard E-mail client folder navigation
@@ -131,7 +127,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="features_list">
                 <ul>
                     <li>Search all your E-mail accounts and RSS feeds at once with a simple form</li>
                     <li>Simple interface translation system that does not use gettext or .po files, just arrays of
@@ -142,7 +138,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="features_list">
                 <ul>
                     <li>Sessions and user data can be stored in any PDO compatible database or flat files on the
                         server
@@ -156,71 +152,76 @@
                     </li>
                 </ul>
             </div>
-            <a style="width: 100%; text-align: center;" href="features.html">the complete list</a>
         </div>
+        <a class="btn_link md:mx-auto capitalize" href="features.html">the complete list</a>
     </div>
 </section>
 <!--Security section-->
-<section class="security-section">
-    <div class="container text-center">
-        <h2>Have a question about security?</h2>
+<section class="security_section_bg">
+    <div class="security_section wrapper p-3 md:p-0">
+    <div class=" md:w-7/12 text-xl text-gray-700">
+        <h2 class="mb-2">Have a question about security?</h2>
         <h3>Found a flaw in Cypht? </h3>
-        <p> We want to hear from you! Drop by the Cypht Gitter channel, or send me an E-mail at <a
+        <p> We want to hear from you! Drop by the Cypht Gitter channel, or send me an E-mail at <a class="mail"
                 href="mailto:jason@cypht.org">jason@cypht.org</a>. We take security seriously. Cypht is an entirely
             volunteer effort, so we can't
             afford a bounty program. We can however promise that any security issue reported to us before release
             will receive a quick response, a thorough review, a sincere thanks, and an honorable mention on this
-            page. </p><a href="security.html">
-        <button type="button" class="btn btn-success">Read more</button>
-    </a>
+            page. </p><a class="btn" href="security.html">Read more</button></a>
+    </div>
+    <div class="w-4/12 hidden md:flex">
+        <img class="h-[350px] w-[350px]" src="img/security.webp"  alt="Security Image illustration"/>
+    </div>
     </div>
 </section>
 <!--Module section-->
-<section class="module-section">
-    <div class="container text-center">
-        <h2>A modular design</h2>
-        <p>Instead of an application with a plugin API, Cypht is an application comprised entirely of plugins, or as
-            we call them, "module sets". There is only one required set, the "core" modules. The components of any
-            module set can be added to, or even replaced, by site specific modules. All the functionality of Cypht
-            is broken out into module sets, and each set is built from small pieces that are also easy to override.
-        </p><a href="modules.html">
-        <button type="button" class="btn btn-light">Read more</button>
-    </a>
-    </div>
+<section class="module_section_bg text-gray-700">
+   <div class="module_section wrapper p-3 md:p-0">
+        <div class="md:w-7/12 text-xl">
+            <h2 class="mb-4">A modular design</h2>
+            <p>Instead of an application with a plugin API, Cypht is an application comprised entirely of plugins, or as
+                we call them, "module sets". There is only one required set, the "core" modules. The components of any
+                module set can be added to, or even replaced, by site specific modules. All the functionality of Cypht
+                is broken out into module sets, and each set is built from small pieces that are also easy to override.
+            </p>
+            <a class="btn_link mt-3" href="modules.html">Read more</a>
+        </div>
+        <div class="w-4/12 hidden md:flex">
+            <img class="h-[300px] w-[450px] rounded-lg" src="img/modular-design.avif"  alt="Modular design illustration"/>
+        </div>
+   </div>
 </section>
 <!--Footer section-->
-<section class="footer-section" id="contact">
-    <div class="container text-center">
-        <h2>Have a suggestion or a question?</h2>
-        <h3>Or maybe you want to throw huge wads of cash at us? </h3>
-        <p>We love feedback so let us know what you think!</p>
-    </div>
-</section>
-<section class=" social-section text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-3 col-md-3 col-sm-12">
+<section class="footer_section_bg" id="contact">
+    <div class="footer_section text-gray-300 wrapper">
+        <div class="mb-5">
+            <h2 class="mb-2">Have a suggestion or a question?</h2>
+            <h3 class="mb-3 font-bold text-xl">Or maybe you want to throw huge wads of cash at us? </h3>
+            <p>We love feedback so let us know what you think!</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 place-content-center">
+            <div class="footer_card">
                 <p>
                     <span>Fill out an issue at Github</span><br>
-                    <a href="https://github.com/cypht-org/cypht/issues/new/choose">Submit an issue</a>
+                    <a class="link" href="https://github.com/cypht-org/cypht/issues/new/choose">Submit an issue</a>
                 </p>
             </div>
-            <div class="col-3 col-md-3 col-sm-12">
+            <div class="footer_card">
                 <p>
                     <span>Chat with us at Gitter</span><br>
-                    <a href="https://gitter.im/cypht-org/community">Cypht at Gitter</a>
+                    <a class="link" href="https://gitter.im/cypht-org/community">Cypht at Gitter</a>
                 </p>
             </div>
-            <div class="col-3 col-md-3 col-sm-12">
+            <div class="footer_card">
                 <p>
                     <span>Send an E-mail to:</span><br>
-                    <a href="mailto:jason@cypht.org">jason@cypht.org</a>
+                    <a class="link" href="mailto:jason@cypht.org">jason@cypht.org</a>
                 </p>
             </div>
-            <div class="col-3 col-md-3 col-sm-12">
+            <div class="footer_card">
                 <p>
                     <span>Want to contribute?</span><br>
-                    <a href="contribute.html">Cypht website contribution</a>
+                    <a class="link" href="contribute.html">Cypht website contribution</a>
                 </p>
             </div>
         </div>
@@ -231,8 +232,7 @@
         room: 'cypht-org/community'
     };
 </script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-<script src="jquery.slim.min.js"></script>
-<script src="bootstrap.bundle.min.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

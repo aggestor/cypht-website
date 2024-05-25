@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,67 +7,71 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/icon.ico">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="styles/site.css">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" width="120" height="60" alt="">
-            </a>
-            <button class="navbar-toggler toggler-home" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span>
+    <header>
+        <nav class="w-full transition-all apply_bg backdrop-blur duration-500  z-[999] py-3 fixed top-0">
+            <div class="wrapper mx-auto flex items-center justify-between">
+                <a class="navbar-brand" href="index.html">
+                    <img class="md:w-[120px] w-[100px] h-[40px] md:h-[50px]" src="img/logo.svg"  alt="Cypht Logo">
+                </a>
+                <button class="w-9 h-9 border md:hidden  shown rounded grid place-items-center hover:bg-black" type="button" id="navbarToggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 fill-slate-50 stroke-slate-50">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                          
+                </button>
+                <div class="md:flex hidden" id="navbarSupportedContent">
+                    <ul class="flex gap-3 md:border-r border-gray-500 pr-3  uppercase font-semibold text-white">
+                        <li class="nav_item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="security.html">Security</a>
+                        </li>
+                        <li class="nav_item_active">
+                            <a class="nav-link" href="modules.html">Mods</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="license.html">License</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="documentation.html">Documentation</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="https://unencumberedbyfacts.com" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav_item">
+                            <a onclick="document.getElementsByClassName('navbar-collapse')[0].style.display='none';"
+                               class="nav-link" href="contribute.html">Contribute</a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-1 items-center ml-3">
+                        <a class="ml-3 cursor-pointer" target="_blank" href="https://github.com/cypht-org/cypht">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 hover:fill-gray-200 fill-gray-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path></svg>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="features.html">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="security.html">Security</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="modules.html">Mods</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="license.html">License</a>
-                    </li>
-                    <li class="nav-item">
-                        <!--<a class="nav-link" href="tests.html">Test</a>-->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="documentation.html">Documentation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://unencumberedbyfacts.com" target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a onclick="document.getElementsByClassName('navbar-collapse')[0].style.display='none';"
-                           class="nav-link" href="contribute.html">Contribute</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-<section class="content-section container">
-    <h2>Overview</h2>
-    <p>Cypht has a modular design. Instead of an application with a plugin API, Cypht is an application comprised
+<section class="wrapper md:text-xl text-gray-700">
+    <div class="md:h-[300px] h-[450px] flex flex-col  mb-4 justify-end ">
+        <h2 class="text-4xl">Overview</h2>
+        <p class="ml-4 border-gray-400 border-l-8 pl-3 mt-3">Cypht has a modular design. Instead of an application with a plugin API, Cypht is an application comprised
         entirely of plugins, or as we call them, "module sets". There is only one required set, the "core" modules. The
         components of any module set can be added to, or even replaced, by site specific modules. All the functionality
         of Cypht is broken out into module sets, and each set is built from small pieces that are also easy to override.
         The module system is powerful, but also a bit complex. First let's take a look at the module sets that come with
         Cypht:</p>
-    <hr>
-    <ul>
+    </div>
+    <ul class="features_wrapper md:pl-10 pl-5 ">
         <li><a href="https://github.com/cypht-org/cypht/tree/master/modules/2fa"><b>2fa</b></a><a
                 title="Open issues at Github" class="issue_link"
                 href="https://github.com/cypht-org/cypht/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3A2fa">issues</a><br/>TOTP
@@ -262,17 +266,16 @@
         </li>
     </ul>
     <br/>
-    <p> Module sets are setup in the hm3.ini file. With the exception of the core module, they can all be enabled or
+    <p class="ml-4 border-gray-400 border-l-8 pl-3"> Module sets are setup in the hm3.ini file. With the exception of the core module, they can all be enabled or
         disabled independently (though module sets can rely on each other, like the nux module). When the site build
         process is run, module assignments are calculated and saved in the configuration file (so they don't need to be
         re-calculated at run-time). There is also a debug mode in which modules are activated dynamically (for the most
         part) to make development easier. </p>
-    <h3>File Structure</h3>
-    <p> Module set names in the ini file match the directory the module code is in under modules/. Files in a module
+    <h3 class="text-black text-2xl font-semibold my-3">File Structure</h3>
+    <p class="ml-4 border-gray-400 border-l-8 pl-3"> Module set names in the ini file match the directory the module code is in under modules/. Files in a module
         have pre-defined names. Any other required code should be included from one of these files.
     </p>
-    <br/><br/>
-    <ul>
+    <ul class="features_wrapper md:pl-10 pl-5">
         <li><b>setup.php</b><br/>This is where a module set defines it's own modules and assigns them to request
             identifiers. This file must return an array of valid input and associated types in order for the module code
             to have access to it.
@@ -284,25 +287,25 @@
         <li><b>site.css</b><br/>Optional file to include CSS for the module set.</li>
     </ul>
     <br/>
-    <p> A module set can also include an assets sub-directory. Anything in that directory will be made availble in the
+    <p class="ml-4 border-gray-400 border-l-8 pl-3"> A module set can also include an assets sub-directory. Anything in that directory will be made availble in the
         browser. An example of this is the HTML WSIWYG editor for the smtp module set. In debug mode the module site.css
         and site.js files are included directly if they exist. In production mode combined and optionally minified
         versions are used consisting of a single js file and a single CSS file generated by the build process. Minifying
         programs can be specified in the hm3.ini file.
     </p>
-    <h3>Input and Output</h3>
-    <p> There are two kinds of modules: Input processing modules called "handler modules", and output formatting modules
+    <h3 class="text-black md:text-2xl text-xl font-semibold my-3">Input and Output</h3>
+    <p class="ml-4 border-gray-400 border-l-8 pl-3"> There are two kinds of modules: Input processing modules called "handler modules", and output formatting modules
         called "output modules". Modules can pass data to each other, and output modules have access to all the data
         input modules create. By default, module output is immutable and can't be stepped on by other modules. Data can
         be marked writable and an "appendable" data type is also supported. The typical job of a handler module is to
         analyze user input and do some work based on it, which it then sends to the output modules. The typical job of
         an output module is to take the results of an input module and format it for the browser.
     </p>
-    <h3>Hello World</h3>
-    <p> For more information, check out the "hello world" module set. It illustrates how modules work and has loads of
-        comments that explain what is going on:<br/><br/>
+    <h3 class="text-black md:text-2xl text-xl font-semibold my-3">Hello World</h3>
+    <p class="ml-4 border-gray-400 border-l-8 pl-3"> For more information, check out the "hello world" module set. It illustrates how modules work and has loads of
+        comments that explain what is going on:<br/>
+        <a class="link underline" href="https://github.com/cypht-org/cypht/tree/master/modules/hello_world">https://github.com/cypht-org/cypht/tree/master/modules/hello_world</a>
     </p>
-    <a href="https://github.com/cypht-org/cypht/tree/master/modules/hello_world">https://github.com/cypht-org/cypht/tree/master/modules/hello_world</a>
     <br/><br/>
 </section>
 <script>
@@ -310,8 +313,7 @@
         room: 'cypht-org/community'
     };
 </script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-<script src="jquery.slim.min.js"></script>
-<script src="bootstrap.bundle.min.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

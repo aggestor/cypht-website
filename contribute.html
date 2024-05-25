@@ -7,125 +7,129 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/icon.ico">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="styles/site.css">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" width="120" height="60" alt="">
-            </a>
-            <button class="navbar-toggler toggler-home" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span>
+    <header>
+        <nav class="w-full transition-all apply_bg backdrop-blur duration-500  z-[999] py-3 fixed top-0">
+            <div class="wrapper mx-auto flex items-center justify-between">
+                <a class="navbar-brand" href="index.html">
+                    <img class="md:w-[120px] w-[100px] h-[40px] md:h-[50px]" src="img/logo.svg"  alt="Cypht Logo">
+                </a>
+                <button class="w-9 h-9 border md:hidden  shown rounded grid place-items-center hover:bg-black" type="button" id="navbarToggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 fill-slate-50 stroke-slate-50">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                          
+                </button>
+                <div class="md:flex hidden" id="navbarSupportedContent">
+                    <ul class="flex gap-3 md:border-r border-gray-500 pr-3  uppercase font-semibold text-white">
+                        <li class="nav_item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="security.html">Security</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="modules.html">Mods</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="license.html">License</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="documentation.html">Documentation</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-link" href="https://unencumberedbyfacts.com" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav_item_active">
+                            <a class="nav-link" href="contribute.html">Contribute</a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-1 items-center ml-3">
+                        <a class="ml-3 cursor-pointer" target="_blank" href="https://github.com/cypht-org/cypht">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 hover:fill-gray-200 fill-gray-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path></svg>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="features.html">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="security.html">Security</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="modules.html">Mods</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="license.html">License</a>
-                    </li>
-                    <li class="nav-item">
-                        <!--<a class="nav-link" href="tests.html">Test</a>-->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="documentation.html">Documentation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://unencumberedbyfacts.com" target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a onclick="document.getElementsByClassName('navbar-collapse')[0].style.display='none';"
-                           class="nav-link" href="contribute.html">Contribute</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
+        </nav>
+    </header>
+
+<section class="wrapper text-gray-700 md:text-xl">
+        <div class="h-[400px]  flex flex-col justify-end">
+            <h2 class="text-4xl _color mb-4" id="contributing">Want to contribute?</h2>
+            <p>First of all, thank you for interest to cypht! The goal of this page is to provide everything you need to know in order to contribute to cypht-website and its different integrations.</p>
+            <p class="my-3">Cypht project has been designed with standalone PHP, no framework required.</p>
+            <ul class="pl-3">
+                <li><a class="link underline" href="#development-workflow">Development Workflow</a></li>
+                <li><a class="link underline" href="#requirements">Requirements</a></li>
+                <li><a class="link underline" href="#git-guidelines">Git Guidelines</a></li>
+            </ul>
         </div>
-    </nav>
-</header>
+        <div class="mt-3">
+            <h2 class="text-2xl text-black mb-4" id="development-workflow">Development Workflow</h2>
+            <p>The project has been designed with plain html css, no need for extra features, or framework.</p>
+            <h2 id="requirements" class="text-2xl text-black mb-4 mt-3">Requirements</h2>
+            <ol class="pl-3 list-decimal list-inside">
+                <li>You're familiar with <a href="https://github.com">GitHub</a> and the
+                    <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">Pull Request</a> (PR) workflow.
+                </li>
+                <li>You've read the Cypht <a href="documentation.html">documentation</a> and the <a
+                        href="https://github.com/cypht-org/cypht#readme">README</a>.
+                </li>
+                <li>You know about the <a href="https://gitter.im/cypht-org/community">Cypht community.</a> Please use this as help.
+                </li>
+            </ol>
+            <h2 id="git-guidelines" class="text-2xl text-black mb-4 mt-3">Git Guidelines</h2>
+            <ol class="pl-3 list-decimal list-inside">
+                <li>Make sure that the contribution you want to make is explained or detailed in a GitHub issue! Find an
+                    <a href="https://github.com/cypht-org/cypht-website/issues">existing issue</a> or
+                    <a href="https://github.com/cypht-org/cypht-website/issues/new/choose">open a new one</a>.
+                </li>
+                <li>Once done,
+                    <a href="https://github.com/cypht-org/cypht-website/fork">fork the cypht website repository</a> to your own GitHub account.
+                    You can request a maintainer to check your issue before making a PR.
+                </li>
+                <li>Create a new Git branch.</li>
+                <li>Review the <a href="#development-workflow">Development Workflow</a> section that describes the project's technology used.
+                </li>
+                <li>Implement the changes on your branch.</li>
+                <li>
+                    Submit the branch as a PR pointing to the <code>master</code> branch of cypht-website repository.
+                    A maintainer will comment and/or review your Pull Request. Depending on the circumstances, this process may take some time.<br>
+                </li>
+            </ol>
+    
+            <h2 class="text-2xl text-black mb-4 mt-3">Have a question? </h2>
+            <p>We love feedback so let us know what you think! <br> Leave a comment, submit your problem or contribute to
+                the project <br> by joining the community first.
+            </p>
+    
+           <div class="flex gap-3 my-3">
+                <a class="btn_link" href="https://github.com/cypht-org/cypht/">
+                    <button type="button" class="btn btn-success">GitHub</button>
+                </a>
+                <a class="btn_link" href="https://gitter.im/cypht-org/community">
+                    <button type="button" class="btn btn-success">Gitter</button>
+                </a>
+                <a class="btn_link" href="https://www.openhub.net/p/cypht/users">
+                    <button type="button" class="btn btn-success">OpenHub</button>
+                </a>
+           </div>
+        </div>
 
-<section class="contibute-section container">
-    <div class="container">
-        <h2 id="contributing">Want to contribute?</h2>
-        <p>First of all, thank you for interest to cypht! The goal of this page is to provide everything you need to know in order to contribute to cypht-website and its different integrations.</p>
-        <p>Cypht project has been designed with standalone PHP, no framework required.</p>
-        <ul>
-            <li><a href="#development-workflow">Development Workflow</a></li>
-            <li><a href="#requirements">Requirements</a></li>
-            <li><a href="#git-guidelines">Git Guidelines</a></li>
-        </ul>
-        <h2 id="development-workflow">Development Workflow</h2>
-        <p>The project has been designed with plain html css, no need for extra features, or framework.</p>
-
-        <h2 id="requirements">Requirements</h2>
-        <ol>
-            <li>You're familiar with <a href="https://github.com">GitHub</a> and the
-                <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">Pull Request</a> (PR) workflow.
-            </li>
-            <li>You've read the Cypht <a href="documentation.html">documentation</a> and the <a
-                    href="https://github.com/cypht-org/cypht#readme">README</a>.
-            </li>
-            <li>You know about the <a href="https://gitter.im/cypht-org/community">Cypht community.</a> Please use this as help.
-            </li>
-        </ol>
-        <h2 id="git-guidelines">Git Guidelines</h2>
-        <ol>
-            <li>Make sure that the contribution you want to make is explained or detailed in a GitHub issue! Find an
-                <a href="https://github.com/cypht-org/cypht-website/issues">existing issue</a> or
-                <a href="https://github.com/cypht-org/cypht-website/issues/new/choose">open a new one</a>.
-            </li>
-            <li>Once done,
-                <a href="https://github.com/cypht-org/cypht-website/fork">fork the cypht website repository</a> to your own GitHub account.
-                You can request a maintainer to check your issue before making a PR.
-            </li>
-            <li>Create a new Git branch.</li>
-            <li>Review the <a href="#development-workflow">Development Workflow</a> section that describes the project's technology used.
-            </li>
-            <li>Implement the changes on your branch.</li>
-            <li>
-                Submit the branch as a PR pointing to the <code>master</code> branch of cypht-website repository.
-                A maintainer will comment and/or review your Pull Request. Depending on the circumstances, this process may take some time.<br>
-            </li>
-        </ol>
-
-        <h2>Have a question? </h2>
-        <p>We love feedback so let us know what you think! <br> Leave a comment, submit your problem or contribute to
-            the project <br> by joining the community first.
-        </p>
-
-        <a href="https://github.com/cypht-org/cypht/">
-            <button type="button" class="btn btn-success">GitHub</button>
-        </a>
-        <a href="https://gitter.im/cypht-org/community">
-            <button type="button" class="btn btn-success">Gitter</button>
-        </a>
-        <a href="https://www.openhub.net/p/cypht/users">
-            <button type="button" class="btn btn-success">OpenHub</button>
-        </a>
-    </div>
 </section>
 <script>
     ((window.gitter = {}).chat = {}).options = {
         room: 'cypht-org/community'
     };
 </script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-<script src="jquery.slim.min.js"></script>
-<script src="bootstrap.bundle.min.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 
 </html>
